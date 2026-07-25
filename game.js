@@ -568,3 +568,19 @@ playing=true;
 
 
 loop();
+document.querySelectorAll(".player").forEach(function(player){
+
+    player.onclick = function(){
+
+        document.querySelectorAll(".player")
+        .forEach(function(p){
+            p.classList.remove("selected");
+        });
+
+        this.classList.add("selected");
+
+        selectedHero = this.dataset.id;
+
+    };
+
+});
